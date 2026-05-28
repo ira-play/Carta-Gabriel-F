@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta-Gabriel-Ferreira</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #000000, #7f1d1d, #b91c1c);
+      background-size: 300% 300%;
+      animation: fundoAnimado 12s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .carta {
+      width: 100%;
+      max-width: 850px;
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 25px;
+      padding: 70px;
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.25),
+        0 10px 20px rgba(0, 0, 0, 0.15);
+      animation: aparecer 1.2s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .carta::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background: linear-gradient(90deg, #d4af37, #ffd700, #facc15);
+    }
+
+    .carta::after {
+      content: "✉";
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      font-size: 2.5rem;
+      color: rgba(37, 99, 235, 0.15);
+    }
+
+    .topo {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .topo h1 {
+      font-size: 3rem;
+      color: #0f172a;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .topo p {
+      color: #475569;
+      font-size: 1rem;
+    }
+
+    .conteudo p {
+      font-size: 1.15rem;
+      line-height: 2.1;
+      color: #334155;
+      text-align: justify;
+      margin-bottom: 25px;
+    }
+
+    .destaque {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    .assinatura {
+      margin-top: 60px;
+      text-align: right;
+    }
+
+    .assinatura .linha {
+      width: 220px;
+      height: 2px;
+      background: #d4af37;
+      margin-left: auto;
+      margin-bottom: 12px;
+    }
+
+    .assinatura h2 {
+      color: #d4af37;
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+    }
+
+    .assinatura span {
+      color: #475569;
+      font-size: 1rem;
+    }
+
+    .botoes {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      padding: 15px 35px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      background: linear-gradient(135deg, #b91c1c, #7f1d1d);
+      color: white;
+      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+    }
+
+    button:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.6);
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes fundoAnimado {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .carta {
+        padding: 35px;
+      }
+
+      .topo h1 {
+        font-size: 2.2rem;
+      }
+
+      .conteudo p {
+        font-size: 1rem;
+      }
+
+      button {
+        width: 100%;
+      }
+
+      .botoes {
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .carta {
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .botoes {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="carta">
+
+    <div class="topo">
+      <h1>Carta</h1>
+      <p>São Paulo - SP | 2026</p>
+    </div>
+
+    <div class="conteudo">
+      <p>
+        Me chamo <span class="destaque">Gabriel Ferreira dos Santos</span>, tenho 17 anos e possuo grande interesse pelas áreas de tecnologia e design.
+        Tenho como objetivo profissional seguir carreira em <span class="destaque">Design Gráfico</span>, pois admiro a criatividade envolvida no desenvolvimento
+        de identidades visuais, artes digitais e projetos que unem comunicação e estética de forma profissional.
+      </p>
+
+      <p>
+        Além disso, considero o curso de <span class="destaque">Desenvolvimento de Sistemas</span> extremamente interessante e importante para minha formação,
+        principalmente pelas disciplinas de Banco de Dados, Front-end, Back-end e Desenvolvimento Mobile.
+        Essas áreas despertam meu interesse porque permitem compreender todo o processo de criação de sistemas e aplicações,
+        desde a organização e armazenamento das informações até a construção de interfaces modernas, funcionais e acessíveis.
+      </p>
+
+      <p>
+        No Front-end, gosto da possibilidade de desenvolver interfaces visuais atrativas e interativas,
+        utilizando criatividade e lógica ao mesmo tempo.
+        Já no Back-end, admiro a parte responsável pelo funcionamento interno dos sistemas,
+        processamento de dados e integração entre tecnologias.
+      </p>
+
+      <p>
+        Em Banco de Dados, considero muito interessante a organização das informações e a importância da segurança,
+        eficiência e armazenamento correto dos dados.
+        No desenvolvimento Mobile, vejo uma grande oportunidade de criar aplicativos úteis,
+        modernos e inovadores para facilitar o cotidiano das pessoas.
+      </p>
+
+      <p>
+        Acredito que a combinação entre <span class="destaque">Design Gráfico</span> e
+        <span class="destaque">Desenvolvimento de Sistemas</span> pode contribuir significativamente para meu crescimento profissional,
+        permitindo unir criatividade, tecnologia e inovação na criação de projetos completos e modernos.
+      </p>
+    </div>
+
+    <div class="assinatura">
+      <div class="linha"></div>
+      <h2>Gabriel Ferreira dos Santos</h2>
+      <span>Estudante | Tecnologia e Design</span>
+    </div>
+
+    <div class="botoes">
+      <button onclick="window.print()">🖨 Imprimir Carta</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- Ligação do HTML com o CSS -->
+    <link rel="stylesheet" href="css/style.css">
+  
+    <title>Carta</title>
+  </head>

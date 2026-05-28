@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb, #60a5fa);
+    background-size: 300% 300%;
+    animation: fundoAnimado 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+  }
+  
+  .carta {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 60px;
+    border-radius: 25px;
+    box-shadow:
+      0 15px 35px rgba(0, 0, 0, 0.2),
+      0 5px 15px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    animation: aparecer 1.2s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .carta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, #2563eb, #7c3aed, #06b6d4);
+  }
+  
+  .carta::after {
+    content: "✉";
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: rgba(37, 99, 235, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 35px;
+    color: #1e293b;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  
+  p {
+    font-size: 1.15rem;
+    color: #334155;
+    line-height: 2;
+    margin-bottom: 22px;
+    text-align: justify;
+  }
+  
+  .assinatura {
+    margin-top: 60px;
+    text-align: right;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2563eb;
+  }
+  
+  .assinatura::before {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 2px;
+    background: #2563eb;
+    margin-left: auto;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes aparecer {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @keyframes fundoAnimado {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carta {
+      padding: 35px;
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    .assinatura {
+      font-size: 1.1rem;
+    }
+  }
